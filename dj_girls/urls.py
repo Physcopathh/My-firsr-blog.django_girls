@@ -20,5 +20,8 @@ import blog.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls), #admin.site.urls "admin"->from django.contrib import<-admin
-    path('', include(blog.urls))
+    path('', include(blog.urls),name='home')
 ]
+# another rule:
+# if x page don't exist then enter either apps included here-
+# like a for loop for entire apps urls-
