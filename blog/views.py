@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import django.http.response as response
+from django.http import HttpResponse
 from .models import Post
 from django.utils import timezone
 
@@ -9,4 +9,4 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts}) # Inside of {"String":our_data} we give our data to our template
 
 def hello(request):
-    return render(request, 'hello')
+    return HttpResponse('<h1>HelloWorld</h1>',)

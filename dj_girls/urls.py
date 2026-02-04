@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import blog.urls
+import testing.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls), #admin.site.urls "admin"->from django.contrib import<-admin
-    path('', include(blog.urls),name='home')
+    path('', include(blog.urls),name='home'),
+    path('', include(testing.urls),name='testing'),#so if we add "here something" then it becomes /something/then-app-url-dir
 ]
 # another rule:
 # if x page don't exist then enter either apps included here-
