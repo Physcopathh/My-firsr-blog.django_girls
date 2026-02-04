@@ -7,5 +7,6 @@ from django.shortcuts import render
 
 urlpatterns = [
     path('', views.post_list, name='p_l'),
-    path('hello/', views.hello, name='hello')
+    path('hello/', views.hello, name='hello'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail')
 ]
